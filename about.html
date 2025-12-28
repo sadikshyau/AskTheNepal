@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us | Ask The Nepal Adventure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI, sans-serif;
+    background:#111;
+    color:#eaeaea;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+.navbar{
+    width:100%;
+    height:70px;
+    padding:0 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:fixed;
+    top:0;
+    z-index:100;
+    background:rgba(0,0,0,0.65);
+    backdrop-filter:blur(8px);
+}
+
+.logo img {
+    height: 60px;        /* adjust size */
+    width: auto;
+    object-fit: contain;
+}
+
+.menu{
+    list-style:none;
+    display:flex;
+    gap:22px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:rgb(220,53,69);
+}
+
+/* VIDEO HERO */
+.who-we-are{
+    position:relative;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    padding-top:70px;
+}
+
+.bg-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+.video-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.65);
+    z-index:-1;
+}
+
+.who-content{
+    max-width:850px;
+    padding:40px;
+}
+
+.who-content h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.who-content p{
+    font-size:19px;
+    line-height:1.9;
+    opacity:0.95;
+}
+
+/* SECTION */
+section{
+    padding:90px 10%;
+}
+
+/* CARD */
+.card{
+    background:#1c1c1c;
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* TWO COLUMN */
+.two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+/* WHY US */
+.highlight{
+    background:#202020;
+    padding:28px;
+    border-radius:16px;
+    transition:0.4s;
+}
+
+.highlight:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(220,53,69,0.35);
+}
+
+/* STATS */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stat{
+    background:#1c1c1c;
+    padding:35px;
+    border-radius:18px;
+}
+
+.stat h2{
+    color:rgb(220,53,69);
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .who-content h1{font-size:34px}
+    .who-content p{font-size:16px}
+    section{padding:70px 6%}
+    .two-col{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+    <img src="ATN.png" alt="Ask The Nepal Adventure Logo">
+</div>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="advantures.html">Adventures</a></li>
+        <li><a href="about.html" style="color:rgb(220,53,69)">About Us</a></li>
+    </ul>
+</header>
+
+<!-- VIDEO HERO -->
+<section class="who-we-are">
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="himalayas.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="who-content">
+        <h1>Who We Are</h1>
+        <p>
+            Ask the Nepal Adventure is a locally owned and operated adventure travel company based in Nepal, 
+            specializing in trekking, hiking, cultural tours, and customized Himalayan experiences. Our team 
+            consists of experienced and licensed local guides with deep knowledge of Nepal’s mountains, trails, and culture.
+            We focus on delivering safe, well-organized, and authentic journeys that connect travelers with the natural beauty and rich traditions of Nepal.
+            From classic trekking routes to lesser-known destinations, we design trips to suit different interests, fitness levels, and budgets. 
+            Ask the Nepal Adventure is committed to responsible tourism, supporting local communities, and providing personalized service to make every journey memorable.
+        </p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+    <div class="card">
+        <h2>About Ask The Nepal Adventure</h2>
+        <p>
+            Founded by passionate mountaineers and travel experts, we specialize
+            in trekking, expeditions, and cultural adventures across Nepal.
+            Our deep connection with the Himalayas allows us to design journeys
+            that are meaningful, responsible, and life-changing.
+        </p>
+    </div>
+</section>
+
+<!-- WHY US -->
+<section>
+    <h2>Why Choose Us</h2>
+    <div class="two-col">
+        <div class="highlight">
+            <h3>✔ Local Expertise</h3>
+            <p>Experienced guides with real Himalayan knowledge.</p>
+        </div>
+        <div class="highlight">
+            <h3>✔ Safety First</h3>
+            <p>Carefully planned itineraries & emergency protocols.</p>
+        </div>
+        <div class="highlight">
+            <h3>✔ Responsible Tourism</h3>
+            <p>Respect for culture, people & nature.</p>
+        </div>
+        <div class="highlight">
+            <h3>✔ Custom Adventures</h3>
+            <p>Trips tailored to your time and fitness.</p>
+        </div>
+    </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section>
+    <div class="two-col">
+        <div class="card">
+            <h2>Our Mission</h2>
+            <p>
+                To provide authentic Himalayan adventures while promoting
+                sustainability, safety, and cultural respect.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Our Vision</h2>
+            <p>
+                To become one of Nepal’s most trusted adventure travel companies.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section>
+    <div class="stats">
+        <div class="stat">
+            <h2>13+</h2>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat">
+            <h2>300+</h2>
+            <p>Successful Trips</p>
+        </div>
+        <div class="stat">
+            <h2>1200+</h2>
+            <p>Happy Clients</p>
+        </div>
+        <div class="stat">
+            <h2>50+</h2>
+            <p>Expert Guides</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

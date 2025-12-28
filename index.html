@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask The Nepal Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- HEADER -->
+<header class="navbar">
+   <div class="logo">
+    <img src="ATN.png" alt="Ask The Nepal Adventure Logo">
+</div>
+
+    <div class="nav-right">
+        <ul class="menu">
+            <li><a href="#" style="color:rgb(220,53,69)">Home</a></li>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="advantures.html">Adventures</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search adventures...">
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-section">
+    <video class="hero-video" autoplay muted loop>
+        <source src="mount.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Ask The Nepal Adventure</h1>
+        <p class="motto">Escape the Ordinary • Your Next Adventure Awaits</p>
+    </div>
+     <div class="scroll-indicator">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                <path d="M7 10l5 5 5-5z"/>
+            </svg>
+        </div>
+</section>
+
+<!-- JS -->
+<script>
+document.getElementById("search").addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        alert("Searching for: " + this.value);
+        this.value = "";
+    }
+});
+</script>
+
+   <!-- Best Itinerary Section -->
+<section class="best-itinerary">
+    <h1 class="section-title">Most Popular Itinerary</h1>
+
+    <div class="itinerary-content">
+        <!-- LEFT TEXT -->
+        <div class="itinerary-text">
+            <h2>Annapurna Base Camp Trek</h2>
+            <p>
+                The Annapurna Base Camp trek is one of Nepal’s most breathtaking journeys,
+                taking you through charming villages, lush forests, and dramatic mountain
+                landscapes. Surrounded by Annapurna I, Machapuchare, and Hiunchuli, this trek
+                offers a perfect blend of adventure, culture, and natural beauty.
+            </p>
+
+            <a href="annapurna-itinerary.html">
+                <button class="view-more-button">View More</button>
+            </a>
+        </div>
+
+        <!-- RIGHT SLIDESHOW -->
+        <div class="itinerary-slider">
+            <img src="abc1.jpg" class="slide active">
+            <img src="abc2.jpg" class="slide">
+        </div>
+    </div>
+
+    <script>
+let slides = document.querySelectorAll(".itinerary-slider .slide");
+let currentSlide = 0;
+
+setInterval(() => {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+}, 3500); // 3.5 seconds
+</script>
+
+</section>
+
+
+    <!--About Video-->
+    <div class="video-container">
+        <!-- Text -->
+        <div class="text-container">
+            <br>
+            <h2>Your Journey Begins Here</h2>
+            <h3>Discover the Majesty of Nepal</h3>
+            <p> 
+                At Ask The Nepal Adventure, we specialize in creating unforgettable trekking experiences 
+                in the majestic Himalayas. From the towering peaks of Everest to the serene valleys of 
+                Langtang, we guide you through Nepal's most breathtaking landscapes. Our passionate team 
+                of experienced guides ensures your safety while sharing the rich culture and natural 
+                wonders of Nepal.
+            </p>
+        </div>
+        <video class="promo-video" muted autoplay loop playsinline>
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+<!-- BLOG SECTION -->
+<section class="blog-section">
+    <div class="blog-content">
+        <!-- LEFT TEXT -->
+        <div class="blog-text">
+            <h2>Read Latest <span>Travel Stories</span>.</h2>
+
+            <p>
+                Travelling in Nepal is a once-in-a-lifetime experience. From the
+                breathtaking Himalayas to ancient temples and vibrant culture,
+                Nepal offers unforgettable adventures.
+            </p>
+
+            <a href="https://kathmandupost.com/travel"
+               target="_blank"
+               class="btn">
+               See more
+            </a>
+        </div>
+
+        <!-- RIGHT SLIDESHOW -->
+        <div class="image-box">
+            <img src="img1.jpeg" class="slide active">
+        </div>
+    </div>
+</section>
+
+  <!-- Adventures Section -->
+<section class="adventures-section">
+    <div class="adventures-container">
+        <div class="adventures-overlay"></div> <!-- overlay for text readability -->
+        <div class="adventures-content">
+            <h1>Explore our <span class="highlight-text">Adventures</span></h1>
+            <p>From thrilling treks to cultural journeys, discover the best adventures Nepal has to offer.</p>
+            <a href="destination.html">
+                <button class="see-more-button">Explore</button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about-us" class="about-us-section">
+    <div class="about-us-container">
+        <div class="about-us-content">
+            <!-- LEFT: Team Image -->
+            <div class="about-us-image">
+                <img src="team.jpg" alt="Our Team">
+            </div>
+
+            <!-- RIGHT: Text -->
+            <div class="about-us-text">
+                <h1>Meet the amazing team behind <span style="color:rgb(247, 85, 85);">Ask The Nepal Adventure.</span></h1>
+                <p>Our passionate team of guides and travel experts make every adventure unforgettable. We ensure safety, fun, and cultural immersion for all our guests.</p>
+                <a href="about.html">
+                    <button class="see-more-button">See more</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!--Footer segment-->
+    <footer>
+        <div class="footer-container">
+            <div class="left-side-footer">
+                <div class="left-side-footer-1">
+                    <h2>Ask The Nepal Adventure</h2>
+                    <ul>
+                        <li><a href="#" class="footer-navlinks">Home</a></li>
+                        <li><a href="#" class="footer-navlinks">Destinations</a></li>
+                        <li><a href="#" class="footer-navlinks">Blog</a></li>
+                        <li><a href="#" class="footer-navlinks">Adventures</a></li>
+                        <li><a href="#" class="footer-navlinks">About us</a></li>
+                    </ul>
+                </div> 
+
+                <hr style="width:100%; max-width:570px;">
+
+                <div class="left-side-footer-2">
+                    <a href="https://www.facebook.com">Facebook</a>
+                    <a href="https://www.instagram.com">Instagram</a>
+                    <a href="https://www.X.com">X</a>
+                    <a href="https://www.linkedin.com">Linkedin</a>
+                    <a href="https://www.youtube.com/">Youtube</a>
+                </div>
+                
+                <div class="left-side-footer-end">
+                    © 2024-2025 <a href="#" style="color:white;">AskTheNepalAdventure.com</a>
+                </div>
+            </div>
+
+            <div class="right-side-footer">
+                <div class="subscribe-container">
+                    <div class="subscribe-text">
+                        <h3>Subscribe to Adventure Updates</h3>
+                        <br>
+                        <p>Sign up for the latest trekking news and special offers, delivered to you weekly.</p>
+                        <br>
+                        
+                        <div class="subscribe-input">
+                            <form id="emailForm">
+                                <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+                                <button type="submit" class="subscribe-button">Subscribe</button>
+                            </form>
+                        </div>
+
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript/app.js"></script>
+</body>
+</html>

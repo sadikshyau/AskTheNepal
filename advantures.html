@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Adventures in Nepal | Ask The Nepal Adventure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar{
+    width: 100%;
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo left, menu right */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* LOGO */
+.logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* RIGHT SIDE MENU */
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+
+/* MENU */
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: rgb(220, 53, 69);
+}
+
+
+/* SECTION */
+.destination-section {
+    padding: 120px 40px 60px 40px;
+    text-align: center;
+}
+
+.destination-section h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+.destination-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 40px rgba(0,0,0,0.2);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    margin-bottom: 10px;
+    color: #dc3545;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #1d3557;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #dc3545;
+}
+
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="ATN.png" alt="Ask The Nepal Adventure Logo">
+</div>
+    <div class="nav-right">
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="adventures.html" style="color:rgb(220,53,69)">Adventures</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </div>
+</header>
+
+<section class="destination-section">
+    <h1>Adventure Activities in Nepal</h1>
+
+    <div class="destination-grid">
+
+        <div class="destination-card">
+            <img src="trekking.jpg" alt="Trekking">
+            <div class="card-content">
+                <h2>Trekking</h2>
+                <p>Explore the Himalayas with scenic trekking routes from Everest to Annapurna.</p>
+                <a href="trekking.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="rafting.jpg" alt="White Water Rafting">
+            <div class="card-content">
+                <h2>White Water Rafting</h2>
+                <p>Experience thrilling rapids on rivers like Trishuli and Bhote Koshi.</p>
+                <a href="rafting.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="paragliding.jpg" alt="Paragliding">
+            <div class="card-content">
+                <h2>Paragliding</h2>
+                <p>Fly over Pokhara valley and Phewa Lake for breathtaking aerial views.</p>
+                <a href="paragliding.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="mountainbike.jpg" alt="Mountain Biking">
+            <div class="card-content">
+                <h2>Mountain Biking</h2>
+                <p>Ride through rugged trails and remote villages for an adventurous experience.</p>
+                <a href="mountainbiking.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+         <div class="destination-card">
+            <img src="dirtbike.jpg" alt="Mountain Biking">
+            <div class="card-content">
+                <h2>Mountain Touring</h2>
+                <p>Ride through rugged trails and remote villages for an adventurous experience.</p>
+                <a href="mounttouring.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="culture.jpg" alt="Cultural Tours">
+            <div class="card-content">
+                <h2>Cultural Tours</h2>
+                <p>Discover local culture, heritage sites, and vibrant traditions across Nepal.</p>
+                <a href="culturaltour.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blog | Ask The Nepal Adventure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Segoe UI;background:#0d0d0d;color:white}
+.post{
+    margin:30px;
+    padding:25px;
+    border-radius:15px;
+    background:#1a1a1a;
+}
+.post a{color:#dc3545;text-decoration:none}
+
+/* NAVBAR */
+.navbar{
+    width: 100%;
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo left, menu right */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* LOGO */
+.logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* RIGHT SIDE MENU */
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+
+/* MENU */
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: rgb(220, 53, 69);
+}
+.blog-section{
+    padding: 120px 60px 60px;
+    background: #f5f5f5;
+    color: #000;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #111;
+}
+
+.blog-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.blog-card{
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.blog-card:hover{
+    transform: translateY(-10px);
+}
+
+.blog-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-content{
+    padding: 25px;
+    text-align: center;
+}
+
+.blog-content h3{
+    color: rgb(220,53,69);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.blog-content p{
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.blog-content a{
+    display: inline-block;
+    padding: 10px 25px;
+    background: #0b1d3a;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.blog-content a:hover{
+    background: rgb(220,53,69);
+}
+
+
+</style>
+</head>
+<body>
+
+  <header class="navbar">
+  <div class="logo">
+    <img src="ATN.png" alt="Ask The Nepal Adventure Logo">
+</div>
+    <div class="nav-right">
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="blog.html" style="color:rgb(220,53,69)">Blog</a></li>
+            <li><a href="advantures.html">Adventures</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+ <div class="search-box">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+
+    </div>
+
+</header>
+
+<section class="blog-section">
+    <h1 class="section-title">Adventure Stories</h1>
+
+    <div class="blog-grid">
+
+        <!-- CARD 1 -->
+        <div class="blog-card">
+            <img src="trekking.jpg" alt="Trekking">
+            <section class="blog-detail">
+
+    <h1>  Trekking in Nepal: A Journey Through the Himalayas</h1>
+
+    <p>
+        Nepal is a trekker’s paradise, offering some of the most breathtaking trails in the world.
+        From snowcapped Himalayan peaks to peaceful mountain villages, trekking in Nepal is more
+        than an adventure it’s a life changing experience.
+    </p>
+
+    <h2> 🌄Why Trekking in Nepal is Special</h2>
+    <p>
+        Nepal is home to 8 of the world’s 14 highest mountains, including Mount Everest.
+        Trekking routes pass through dramatic landscapes, ancient monasteries, rhododendron forests,
+        and traditional villages where local culture remains beautifully preserved.
+    </p>
+    <p>
+        Each step on the trail tells a story of nature, resilience, and timeless traditions.
+    </p>
+
+    <h2> 🗺️Popular Trekking Routes</h2>
+    <ul>
+        <li><strong>Everest Base Camp Trek</strong> Walk in the footsteps of legendary mountaineers.</li>
+        <li><strong>Annapurna Base Camp Trek</strong> A perfect mix of mountains, forests, and culture.</li>
+        <li><strong>Langtang Valley Trek</strong> Close to Kathmandu, rich in Tamang culture.</li>
+        <li><strong>Mardi Himal Trek</strong> A peaceful trail with stunning close up mountain views.</li>
+        <li><strong>Gosaikunda Trek</strong> A sacred alpine lake trek with spiritual significance.</li>
+    </ul>
+
+    <h2> 🏕️What You’ll Experience</h2>
+    <ul>
+        <li>Warm hospitality from mountain communities</li>
+        <li>Stunning sunrises over the Himalayas</li>
+        <li>Peaceful walking trails far from city life</li>
+        <li>Challenging climbs rewarded with unforgettable views</li>
+    </ul>
+
+    <p>
+        Trekking allows you to disconnect from the modern world and reconnect with nature.
+    </p>
+
+    <h2> 📅Best Time for Trekking</h2>
+    <p>The best seasons for trekking in Nepal are:</p>
+    <ul>
+        <li><strong>Spring (March–May):</strong> Clear skies and blooming rhododendrons</li>
+        <li><strong>Autumn (September–November):</strong> Stable weather and crystal clear mountain views</li>
+    </ul>
+
+    <h2>Tips for a Safe Trek</h2>
+    <ul>
+        <li>Trek at a comfortable pace and stay hydrated</li>
+        <li>Always carry proper gear and clothing</li>
+        <li>Hire local guides for safety and cultural insight</li>
+        <li>Respect local customs and the environment</li>
+    </ul>
+
+    <h2>Final Thoughts</h2>
+    <p>
+        Trekking in Nepal is not just about reaching a destination it’s about the journey,
+        the people you meet, and the memories you create along the way.
+        Whether you are a beginner or an experienced trekker, Nepal offers a trail that will touch your soul.
+    </p>
+
+    <p class="brand">
+        <strong>Ask The Nepal Adventure</strong> is here to guide you every step of the way helping you explore
+        the Himalayas safely, responsibly, and memorably.
+    </p>
+
+</section>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="blog-card">
+            <img src="rafting.jpg" alt="Rafting">
+            <section class="blog-detail">
+                <section class="blog-detail">
+
+    <h1> White Water Rafting in Nepal: Conquer the Rapids</h1>
+
+    <p>
+        White water rafting in Nepal is an adrenaline-filled adventure that takes you through
+        roaring rivers, deep gorges, and lush landscapes. Nepal’s rivers offer some of the best
+        rafting experiences in South Asia.
+    </p>
+
+    <h2> 🚣Why Rafting in Nepal is Unique</h2>
+    <p>
+        Originating from the Himalayas, Nepal’s rivers provide thrilling rapids combined with
+        scenic beauty. Whether you are a beginner or an experienced rafter, there’s a river for everyone.
+    </p>
+
+    <h2> 🗺️Popular Rafting Rivers</h2>
+    <ul>
+        <li><strong>Trishuli River</strong> – Perfect for beginners and short trips.</li>
+        <li><strong>Bhote Koshi</strong> – One of the most challenging and thrilling rivers.</li>
+        <li><strong>Kali Gandaki</strong> – Scenic rafting with strong rapids.</li>
+        <li><strong>Sun Koshi</strong> – Multi-day rafting adventure through remote areas.</li>
+    </ul>
+
+    <h2> 🏞️What You’ll Experience</h2>
+    <ul>
+        <li>Exciting rapids and fast-flowing rivers</li>
+        <li>Camping on riverbanks under the stars</li>
+        <li>Professional guides ensuring safety</li>
+        <li>Close encounters with nature and wildlife</li>
+    </ul>
+
+    <h2> 📅Best Time for Rafting</h2>
+    <ul>
+        <li><strong>Spring (March–May):</strong> Ideal water levels and warm weather</li>
+        <li><strong>Autumn (September–November):</strong> Clear weather and stable river flow</li>
+    </ul>
+
+    <h2> Safety Guidelines </h2>
+    <ul>
+        <li>Always wear helmets and life jackets</li>
+        <li>Listen carefully to guide instructions</li>
+        <li>Know basic swimming techniques</li>
+        <li>Raft only with certified operators</li>
+    </ul>
+
+    <h2> Final Thoughts</h2>
+    <p>
+        White water rafting in Nepal is more than just a sport—it’s a journey through nature,
+        teamwork, and thrilling adventure.
+    </p>
+
+    <p class="brand">
+        <strong>Ask The Nepal Adventure</strong> offers safe and unforgettable rafting experiences
+        guided by professionals.
+    </p>
+
+</section>
+</div>
+
+        <!-- CARD 3 -->
+        <div class="blog-card">
+            <img src="paragliding.jpg" alt="Paragliding">
+             <h1>  Paragliding in Nepal: Soaring Above the Himalayas</h1>
+
+    <p>
+        Paragliding in Nepal offers a once-in a lifetime opportunity to fly freely above
+        majestic mountains, serene lakes, and vibrant valleys. It is one of the most thrilling
+        adventure activities Nepal has to offer.
+    </p>
+
+    <h2> 🌤️Why Paragliding in Nepal is Special</h2>
+    <p>
+        Nepal’s unique geography provides ideal wind conditions and dramatic landscapes for paragliding.
+        From high Himalayan peaks to green valleys below, every flight offers breathtaking aerial views.
+    </p>
+    <p>
+        Flying above traditional villages and natural wonders gives you a rare perspective of Nepal’s beauty.
+    </p>
+
+    <h2> 📍Popular Paragliding Locations</h2>
+    <ul>
+        <li><strong>Pokhara</strong> – World-famous paragliding spot with views of Phewa Lake and Annapurna range.</li>
+        <li><strong>Bandipur</strong> – Scenic flights over hills and traditional settlements.</li>
+        <li><strong>Sirkot</strong> – A peaceful flying site with panoramic landscapes.</li>
+    </ul>
+
+    <h2> 🌄What You’ll Experience</h2>
+    <ul>
+        <li>Bird’s-eye views of mountains, lakes, and valleys</li>
+        <li>Safe tandem flights with certified pilots</li>
+        <li>Peaceful gliding mixed with adrenaline moments</li>
+        <li>Unforgettable photographs and videos</li>
+    </ul>
+
+    <h2> 📅Best Time for Paragliding</h2>
+    <ul>
+        <li><strong>Spring (March–May):</strong> Stable weather and clear skies</li>
+        <li><strong>Autumn (September–November):</strong> Best visibility and smooth winds</li>
+    </ul>
+
+    <h2> 🧭Safety Tips</h2>
+    <ul>
+        <li>Always fly with licensed and experienced pilots</li>
+        <li>Follow pre-flight instructions carefully</li>
+        <li>Wear comfortable clothing and sturdy shoes</li>
+        <li>Avoid flying during bad weather</li>
+    </ul>
+
+    <h2>Final Thoughts</h2>
+    <p>
+        Paragliding in Nepal is the perfect blend of adventure and serenity.
+        Floating high above the land gives a sense of freedom like no other.
+    </p>
+
+    <p class="brand">
+        <strong>Ask The Nepal Adventure</strong> ensures a safe, exciting, and unforgettable flying experience.
+    </p>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>
