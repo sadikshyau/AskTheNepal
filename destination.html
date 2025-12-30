@@ -1,28 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<header class="navbar">
-    <div class="logo">
-    <img src="ATN.png" alt="Ask The Nepal Adventure Logo">
-</div>
-
-    <div class="nav-right">
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="destination.html" style="color:rgb(220,53,69)">Destinations</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="advantures.html">Adventures</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-
-        <div class="search-box">
-            <input type="text" id="search" placeholder="Search adventures...">
-        </div>
-    </div>
-</header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinations - Ask The Nepal Adventure</title>
 <style>
 body{margin:0;font-family:Segoe UI;background:#111;color:white}
 section{padding:120px 40px}
+
+/* NAVBAR */
+.navbar{
+    width: 100%;
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(8px);
+    box-sizing: border-box;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.menu a:hover{
+    color: rgb(220, 53, 69);
+}
+
+/* DROPDOWN CONTAINER */
+.country-dropdown {
+    margin: 40px 0;
+}
+
+.dropdown-header {
+    background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
+    padding: 30px 35px;
+    border-radius: 18px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #eaeaea;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: all 0.4s ease;
+    user-select: none;
+}
+
+.dropdown-header:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(220,53,69,0.3);
+    background: linear-gradient(135deg, #3d3d3d, #4d4d4d);
+}
+
+.dropdown-arrow {
+    font-size: 24px;
+    transition: transform 0.4s ease;
+    color: rgb(220, 53, 69);
+}
+
+.dropdown-header.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 20px;
+}
+
+.dropdown-content.active {
+    max-height: 1000px;
+    padding: 20px;
+}
+
 /* Link wrapper */
 .card-link{
     text-decoration: none;
@@ -32,7 +115,7 @@ section{padding:120px 40px}
 
 /* CARD STYLE */
 .card{
-    background: linear-gradient(135deg, #2b2b2b, #ffffff);
+    background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
     padding: 35px;
     margin: 25px 0;
     border-radius: 18px;
@@ -74,83 +157,127 @@ section{padding:120px 40px}
     transform: translateX(100%);
 }
 
-.navbar{
-    width: 100%;
-    height: 70px;
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    top: 0;
-    z-index: 100;
-}
-
-.logo img {
-    height: 60px;        /* adjust size */
-    width: auto;
-    object-fit: contain;
-}
-
-.nav-right{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.menu{
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-}
-
-.menu a{
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.menu a:hover{
-    color: rgb(220, 53, 69);
-}
-
-.card-link{
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
 @media (max-width: 768px){
+    .navbar{
+        padding: 0 20px;
+    }
+    
+    .menu{
+        gap: 15px;
+    }
+    
+    .dropdown-header {
+        font-size: 22px;
+        padding: 25px;
+    }
+    
     .card{
         font-size: 20px;
         padding: 25px;
     }
 }
-
-
 </style>
 </head>
 <body>
 
+<header class="navbar">
+    <div class="logo">
+        <img src="ATN.png" alt="Ask The Nepal Adventure Logo">
+    </div>
+
+    <div class="nav-right">
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destination.html" style="color:rgb(220,53,69)">Destinations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="advantures.html">Adventures</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </div>
+</header>
+
 <section>
-    <h1>Top Destinations in Nepal</h1>
+    <h1>Top Destinations</h1>
 
-    <a href="everest.html" class="card-link">
-        <div class="card">Everest Region</div>
-    </a>
+    <!-- NEPAL DROPDOWN -->
+    <div class="country-dropdown">
+        <div class="dropdown-header" onclick="toggleDropdown(this)">
+            <span>Nepal</span>
+            <span class="dropdown-arrow">▼</span>
+        </div>
+        <div class="dropdown-content">
+            <a href="everest.html" class="card-link">
+                <div class="card">Everest Region</div>
+            </a>
+            <a href="lantang.html" class="card-link">
+                <div class="card">Langtang Region</div>
+            </a>
+            <a href="annapurna.html" class="card-link">
+                <div class="card">Annapurna Region</div>
+            </a>
+        </div>
+    </div>
 
-    <a href="lantang.html" class="card-link">
-        <div class="card">Langtang Region</div>
-    </a>
+    <!-- INDIA DROPDOWN -->
+    <div class="country-dropdown">
+        <div class="dropdown-header" onclick="toggleDropdown(this)">
+            <span>India</span>
+            <span class="dropdown-arrow">▼</span>
+        </div>
+        <div class="dropdown-content">
+            <a href="Kedarnath.html" class="card-link">
+                <div class="card">Kedarnath</div>
+            </a>
+            <a href="Darjeeling.html" class="card-link">
+                <div class="card">Darjeeling</div>
+            </a>
+        </div>
+    </div>
 
-    <a href="annapurna.html" class="card-link">
-        <div class="card">Annapurna Region</div>
-    </a>
+    <!-- BHUTAN DROPDOWN -->
+    <div class="country-dropdown">
+        <div class="dropdown-header" onclick="toggleDropdown(this)">
+            <span>Bhutan</span>
+            <span class="dropdown-arrow">▼</span>
+        </div>
+        <div class="dropdown-content">
+            <a href="TigerNest.html" class="card-link">
+                <div class="card">Paro Taktsang (Tiger's Nest)</div>
+            </a>
+            <a href="DrukPath.html" class="card-link">
+                <div class="card">Druk Path Trek</div>
+            </a>
+            <a href="Snowman.html" class="card-link">
+                <div class="card">Snowman Trek</div>
+            </a>
+        </div>
+    </div>
+
 </section>
+
+<script>
+function toggleDropdown(header) {
+    const content = header.nextElementSibling;
+    const allHeaders = document.querySelectorAll('.dropdown-header');
+    const allContents = document.querySelectorAll('.dropdown-content');
+    
+    // Close other dropdowns
+    allHeaders.forEach(h => {
+        if (h !== header) {
+            h.classList.remove('active');
+        }
+    });
+    allContents.forEach(c => {
+        if (c !== content) {
+            c.classList.remove('active');
+        }
+    });
+    
+    // Toggle current dropdown
+    header.classList.toggle('active');
+    content.classList.toggle('active');
+}
+</script>
 
 </body>
 </html>
