@@ -63,9 +63,11 @@ svg {
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    gap: 2rem;
     top: 0;
     left: 0;
     z-index: 1000;
+    margin-left: auto;
     /* Clean transparency */
     background: transparent; 
     backdrop-filter: none; 
@@ -79,14 +81,21 @@ svg {
     cursor: pointer;
 }
 
-/* OVAL SEARCH BOX */
+.search-box {
+    display: flex;
+    align-items: right;
+}
+
 .search-box input {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px); /* Professional glass effect */
     border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 30px; /* Makes it oval */
-    padding: 8px 20px;
+    border-radius: 30px; 
+    padding: 8px 8px; /* Increased side padding for text breathing room */
     color: white;
     outline: none;
+    width: 180px;
+    transition: all 0.3s ease;
 }
 
 .menu{
