@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Adventure | Ask The Nepal Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+  <div class="logo">
+    <img src="ATN.png" alt="Ask The Nepal Adventure Logo">
+</div>
+    <div class="nav-right">
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="adventures.html" style="color:rgb(220,53,69)">Adventures</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </div>
+</header>
+
+<style>
+    /* NAVBAR */
+.navbar{
+    width:100%;
+    height:70px;
+    padding:0 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:fixed;
+    top:0;
+    left:0; /* Added - ensures navbar starts from left edge */
+    z-index:100;
+    background:rgba(0,0,0,0.65);
+    backdrop-filter:blur(8px);
+    box-sizing: border-box; /* Added - ensures padding doesn't add to width */
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.menu{
+    list-style:none;
+    display:flex;
+    gap:22px;
+    margin:0; /* Added - removes default margin */
+    padding:0; /* Added - removes default padding */
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:0.3s;
+    white-space: nowrap; /* Added - prevents menu items from wrapping */
+}
+
+.menu a:hover{
+    color:rgb(220,53,69);
+}
+
+    .booking-section {
+    padding: 100px 10%;
+    background: #111;
+    min-height: 100vh;
+}
+
+.booking-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #1c1c1c;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: white; 
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    padding: 12px;
+    background: #ffffff; /* White background so black letters are clear */
+    border: 1px solid #ccc;
+    color: #000000; /* Makes the typed letters (Name, Age) BLACK */
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+}
+
+/* Optional: Make placeholder text a soft gray */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #666;
+}
+
+/* Ensure the text stays black even when user clicks inside the box */
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: rgb(220, 53, 69); /* Red border focus to match your brand */
+    background: #fdfdfd;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: rgb(220,53,69);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #a72834;
+    transform: translateY(-2px);
+}
+</style>
+
+    <section class="booking-section">
+        <div class="card booking-card">
+            <h2 style="color:rgb(220,53,69); text-align:center; margin-bottom:20px;">Adventure Booking Form</h2>
+            <form action="booking.php" method="POST" class="booking-form">
+                
+                <div class="form-group">
+                    <label>Full Name*</label>
+                    <input type="text" name="fullname" required placeholder="Enter your full name">
+                </div>
+
+                <div class="two-col">
+                    <div class="form-group">
+                        <label>Email Address*</label>
+                        <input type="email" name="email" required placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Number*</label>
+                        <input type="tel" name="phone" required placeholder="+977 ...">
+                    </div>
+                </div>
+
+                <div class="two-col">
+                    <div class="form-group">
+                        <label>Age*</label>
+                        <input type="number" name="age" id="ageInput" required min="1" placeholder="Your age">
+                        <small id="ageWarning" style="color:rgb(220,53,69); display:none;">*Note: Some high-altitude adventures are restricted for ages below 18.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Planned Date*</label>
+                        <input type="date" name="trek_date" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Emergency Contact Info* (Name & Relation & Phone)</label>
+                    <textarea name="emergency_contact" required placeholder="Who should we call in an emergency?"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Type of Adventure / Trekking*</label>
+                    <select name="adventure_type" required>
+                        <optgroup label="Trekking & Hiking">
+            <option value="Everest Base Camp">Everest Base Camp Trek</option>
+            <option value="Annapurna Base Camp">Annapurna Base Camp Trek</option>
+            <option value="Annapurna Circuit">Annapurna Circuit Trek</option>
+            <option value="Poon Hill">Poon Hill Sunrise Trek</option>
+            <option value="Mardi Himal">Mardi Himal Trek</option>
+            <option value="Langtang Valley">Langtang Village Trek</option>
+            <option value="Upper Mustang">Upper Mustang Expedition</option>
+            </optgroup>
+
+            <optgroup label="Tours & Wildlife">
+            <option value="Jungle Safari">Chitwan/Bardia Jungle Safari</option>
+            <option value="Cultural Tour">Kathmandu Valley Cultural Tour</option>
+            <option value="Lumbini Tour">Lumbini (Birthplace of Buddha) Tour</option>
+                </optgroup>
+
+            <optgroup label="Extreme Adventure">
+            <option value="Peak Climbing">Peak Climbing (18+ Only)</option>
+            <option value="Paragliding">Paragliding (Pokhara)</option>
+            <option value="Bungee Jumping">Bungee Jumping / Kushma Swing</option>
+            <option value="White Water Rafting">White Water Rafting</option>
+            </optgroup>
+            </select>
+        </div>
+
+                <div class="form-group">
+                    <label>Medical History / Health Declaration*</label>
+                    <p style="font-size:13px; opacity:0.8; margin-bottom:5px;">Do you have any severe diseases, heart conditions, or respiratory issues?</p>
+                    <textarea name="health_info" required placeholder="Please list any medical conditions or write 'None'"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Simple age check listener
+        document.getElementById('ageInput').addEventListener('input', function() {
+            const warning = document.getElementById('ageWarning');
+            if (this.value < 18 && this.value !== "") {
+                warning.style.display = 'block';
+            } else {
+                warning.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

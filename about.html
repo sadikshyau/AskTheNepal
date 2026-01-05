@@ -177,6 +177,106 @@ section{
     font-size:38px;
     margin-bottom:8px;
 }
+.social-sidebar {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999; /* Ensures they stay above the video and slider */
+}
+
+.social-icon img {
+    width: 26px; /* "Small small" size as requested */
+    height: 26px;
+    filter: invert(1); /* Turns icons white to pop against the dark video/images */
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover img {
+    opacity: 1;
+    transform: scale(1.70); /* Slight grow effect on hover */
+    filter: invert(1) drop-shadow(0 0 8px rgba(210, 74, 87, 0.8)); /* Glows red on hover */
+}
+
+/* TEAM SECTION STYLES */
+.team-section {
+    padding: 90px 10%;
+    background: #111;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+/* Alternate Layout: Even members (2 and 4) flip image to right */
+.team-member:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.member-image {
+    flex: 1;
+}
+
+.member-image img {
+    width: 100%;
+    max-width: 450px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #222;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-info h3 {
+    color: rgb(220, 53, 69); /* Using your brand red */
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.member-info h4 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.member-info p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .team-member, .team-member:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .member-image img {
+        height: 300px;
+        width: 100%;
+    }
+}
 
 /* MOBILE */
 @media(max-width:768px){
@@ -193,7 +293,7 @@ section{
 <!-- NAVBAR -->
 <header class="navbar">
     <div class="logo">
-    <img src="ATN.png" alt="Ask The Nepal Adventure Logo">
+    <img src="ATN2.png" alt="Ask The Nepal Adventure Logo">
 </div>
     <ul class="menu">
         <li><a href="index.html">Home</a></li>
@@ -221,6 +321,14 @@ section{
             From classic trekking routes to lesser-known destinations, we design trips to suit different interests, fitness levels, and budgets. 
             Ask the Nepal Adventure is committed to responsible tourism, supporting local communities, and providing personalized service to make every journey memorable.
         </p>
+        <div class="social-sidebar">
+    <a href="https://www.instagram.com/askthenepal/" target="_blank" class="social-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/askthenepal" target="_blank" class="social-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+    </a>
+</div>
     </div>
 </section>
 
@@ -229,7 +337,7 @@ section{
     <div class="card">
         <h2>About Ask The Nepal Adventure</h2>
         <p>
-            Founded by passionate mountaineers and travel experts, we specialize
+            Founded by Shiva Lamichhane, a passionate mountaineers and travel experts, we specialize
             in trekking, expeditions, and cultural adventures across Nepal.
             Our deep connection with the Himalayas allows us to design journeys
             that are meaningful, responsible, and life-changing.
@@ -238,24 +346,59 @@ section{
 </section>
 
 <!-- WHY US -->
-<section>
-    <h2>Why Choose Us</h2>
-    <div class="two-col">
-        <div class="highlight">
-            <h3>✔ Local Expertise</h3>
-            <p>Experienced guides with real Himalayan knowledge.</p>
+<section class="team-section">
+    <h2 class="section-title">Meet Our Expert Team</h2>
+    
+    <div class="team-member">
+        <div class="member-image">
+            <img src="team1.jpg" alt="Team Member 1">
         </div>
-        <div class="highlight">
-            <h3>✔ Safety First</h3>
-            <p>Carefully planned itineraries & emergency protocols.</p>
+        <div class="member-info">
+            <h3>Founder & Lead Guide</h3>
+            <h4>Shiva Lamichhane</h4>
+            <p>With over 13 Years of mountaineering heritage, our Chairman provides the strategic compass for Ask The Nepal Adventure. A pioneer in sustainable tourism, he has dedicated his career to opening new trails while ensuring the preservation of the Himalayan ecosystem. His leadership focuses on building a bridge between traditional Nepalese hospitality and modern safety standards, ensuring that every guest experiences the heart of the mountains with absolute peace of mind.</p>
         </div>
-        <div class="highlight">
-            <h3>✔ Responsible Tourism</h3>
-            <p>Respect for culture, people & nature.</p>
+    </div>
+
+    <div class="team-member">
+        <div class="member-image">
+            <img src="team2.png" alt="Team Member 2">
         </div>
-        <div class="highlight">
-            <h3>✔ Custom Adventures</h3>
-            <p>Trips tailored to your time and fitness.</p>
+        <div class="member-info">
+            <h3>Operations Manager</h3>
+            <h4>Shailendra Lamichhane</h4>
+            <p>Our Operation Manager is the engine behind every successful summit and trek. Responsible for the complex logistics of high-altitude travel, they oversee everything from guide assignments and local permits to emergency evacuation protocols. By integrating real-time weather data and trail intelligence, the Operation Manager ensures that every itinerary is executed with precision, making the impossible adventures possible for travelers of all levels.</p>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <div class="member-image">
+            <img src="team3.png" alt="Team Member 3">
+        </div>
+        <div class="member-info">
+            <h3>Associate</h3>
+            <h4>Prashanga</h4>
+            <p>Prashanga is the heartbeat of our daily logistics. He manages every booking 
+            detail from the moment you click "Book Now" until you reach the trail. His goal is to ensure that every trekker is fully prepared, informed, and 
+            confident before they ever take their first step on the trail.
+            He specializes in permit coordination and ensuring that every traveler’s 
+            medical requirements are shared with their lead guide for a 100% safe journey.</p>
+        </div>
+    </div>
+
+  <div class="team-member">
+        <div class="member-image">
+            <img src="team4.jpeg" alt="Team Member 4">
+        </div>
+        <div class="member-info">
+            <h3>Digital Operations</h3>
+            <h4>Sadikshya</h4>
+            <p>Sadikshya ensures that our digital frontier is as sturdy as the Himalayas. 
+            He manages our 24/7 satellite communication links for remote treks, 
+            oversees the real-time GPS tracking systems for guest safety, and maintains 
+            our seamless online booking platform. When you're in the mountains, 
+            Sadikshya's technical expertise is the silent thread keeping you connected 
+            to the world.</p>
         </div>
     </div>
 </section>

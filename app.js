@@ -32,4 +32,3 @@ document.querySelector('.scroll-indicator').addEventListener('click', function()
         behavior: 'smooth'
     });
 });
-
